@@ -3,7 +3,11 @@
 - By: Immanuel Salazar Díaz Mobile Developer - @imadiaz
 
 #Challenge
-- You need to design the 4 screens according to the template (We need to add the landing screen)
+- You need to design the 4 screens according to the template 
+- 1 Landing Screen
+- 2 Home Screen
+- 3 Detail Screen
+- 4 Image Gallery Screen
 - https://dribbble.com/shots/16127681-Travel-App-Discover-new-places/attachments/7980909?mode=media
 
 #Criteria of acceptance
