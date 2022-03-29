@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Compose-Academy</string>
+
+    <string name="label_explore">Explore</string>
+    <string name="label_explore_description">Find a place for yourself</string>
+    <string name="label_hotels">Hotels</string>
+    <string name="label_things_to_do">Things to do</string>
+    <string name="label_events">Events</string>
+    <string name="label_sights">Sights</string>
+    <string name="label_categories">Categories</string>
+    <string name="label_mountains">Mountains</string>
+    <string name="label_beach">Beach</string>
+    <string name="label_forest">Forest</string>
+    <string name="label_see_more">See more</string>
+    <string name="label_explore_places">Explore and discover new places</string>
+    <string name="label_explore_places_description">Browse a lot of interesting tourist offers and choose something for yourself. The world is waiting!</string>
+    <string name="label_search">Search</string>
+    <string name="label_sign_in">Sign in</string>
+    <string name="label_create_account">Create an account</string>
+    <string name="label_overview">Overview</string>
+    <string name="label_details">Details</string>
+    <string name="label_costs">Costs</string>
+    <string name="label_place_description">Beachfront boutique hotel with 24 charming rooms, spa, yoga center, beach club, kiteboard school and three delicious restaurants, Mandarina Seaside Restaurant ...</string>
 </resources>
