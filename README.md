@@ -16,3 +16,8 @@
 - Create the detail screen
 - Create a gallery screen for the images
 - Upload your changes
+
+#Instructions
+- Clone the project and build
+- Create a branch following this structure: ``` challenge/design/[FullName] ``` example ``` challenge/design/ImmanuelSalazarDiaz``` 
+- Push all your changes in your own branch
