@@ -16,6 +16,7 @@
 - Create the detail screen
 - Create a gallery screen for the images
 - Upload your changes
+- All your screens and components should have the  ``` @Preview method ```
 
 #Instructions
 - Clone the project and build
