@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Compose-Academy</string>
-
     <string name="label_explore">Explore</string>
     <string name="label_explore_description">Find a place for yourself</string>
     <string name="label_hotels">Hotels</string>
