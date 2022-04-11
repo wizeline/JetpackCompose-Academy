@@ -30,61 +30,24 @@ class MainActivity : ComponentActivity() {
         setContent {
             ComposeAcademyTheme {
                 // A surface container using the 'background' color from the theme
-
-
-
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-//                   // Greeting("Android")
-//                 //   LandingScreen()
-//                      HomeScreen()
-//                 // DetailScreen()
-//                   // ImageGalleryScreen()
-
-                    CompositionLocalProvider(LocalNavController provides rememberNavController()) {
-                        AppNavigation()
-                    }
-
+                    //Greeting("Android")
+                    LandingScreen()
+                    //HomeScreen()
+                    //DetailScreen()
+                    //ImageGalleryScreen()
                 }
             }
         }
     }
 }
 
-val LocalNavController = compositionLocalOf<NavHostController> {
-    error("composition not found")
-}
 
-@Composable
-fun AppNavigation(
 
-) {
-    val navController = LocalNavController.current
-    NavHost(navController = navController, startDestination = "landing"){
-        composable(
-            route = "landing"
-        ) {
-            LandingScreen()
-        }
-        composable(
-            route = "home"
-        ) {
-            HomeScreen()
-        }
-        composable(
-            route = "detail"
-        ) {
-            DetailScreen()
-        }
-        composable(
-            route = "gallery"
-        ) {
-            ImageGalleryScreen()
-        }
-    }
-}
+
 
 
 @Composable

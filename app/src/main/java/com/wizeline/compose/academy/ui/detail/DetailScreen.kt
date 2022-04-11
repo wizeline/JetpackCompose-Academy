@@ -20,7 +20,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.wizeline.compose.academy.LocalNavController
 import com.wizeline.compose.academy.R
 import com.wizeline.compose.academy.data.models.Place
 import com.wizeline.compose.academy.domain.DataGenerator
@@ -154,7 +153,6 @@ private fun DetailCardContent(
                 CustomSpacer()
                 PlaceImageGallery()
 
-                val navController = LocalNavController.current
                 CustomSpacer()
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -164,9 +162,7 @@ private fun DetailCardContent(
                     PlaceItemPrice(place.price.toString())
                     CustomButton(
                         title = stringResource(id = R.string.label_check_availability)
-                    ) {
-                        navController.navigate("gallery")
-                    }
+                    ) {}
                 }
             }
 

@@ -15,7 +15,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
-import com.wizeline.compose.academy.LocalNavController
 import com.wizeline.compose.academy.R
 import com.wizeline.compose.academy.ui.components.common.CustomButton
 import com.wizeline.compose.academy.ui.components.common.CustomSpacer
@@ -69,14 +68,11 @@ private fun LandingContent(
 
         CustomSpacer()
 
-        val navcontroller = LocalNavController.current
 
         CustomButton(
             title = stringResource(id = R.string.label_sign_in),
             modifier = Modifier.fillMaxWidth()
-        ) {
-            navcontroller.navigate("home")
-        }
+        ) {}
 
         CustomSpacer()
 

@@ -8,7 +8,6 @@ import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.LocationOn
-import androidx.compose.material.icons.filled.Star
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -16,7 +15,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextStyle
@@ -24,10 +22,7 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.wizeline.compose.academy.LocalNavController
-import com.wizeline.compose.academy.R
 import com.wizeline.compose.academy.data.models.Place
 import com.wizeline.compose.academy.domain.DataGenerator
 import com.wizeline.compose.academy.ui.components.common.*
@@ -38,10 +33,9 @@ import com.wizeline.compose.academy.ui.theme.*
 fun PlaceItemCard(
    place: Place
 ) {
-    val navController = LocalNavController.current
     Card(
         modifier = Modifier.padding(dimen_5dp)
-            .clickable { navController.navigate("detail") },
+            .clickable {  },
         shape = MaterialTheme.shapes.medium,
         elevation = dimen_5dp
     ) {

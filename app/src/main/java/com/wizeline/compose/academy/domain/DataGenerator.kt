@@ -7,7 +7,7 @@ import com.wizeline.compose.academy.data.models.Place
 class DataGenerator {
     companion object {
         val categoryList = listOf(
-            Category(title = "Mountains", image = R.drawable.mountain),
+            Category(title = "Mountains", image = R.drawable.mountains),
             Category(title = "Beach", image = R.drawable.beach),
             Category(title = "Forest", image = R.drawable.forest)
         )

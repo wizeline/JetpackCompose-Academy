@@ -12,7 +12,6 @@ import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -28,7 +27,6 @@ import com.wizeline.compose.academy.ui.components.place.PlaceItemCard
 import com.wizeline.compose.academy.ui.extensions.defaultScreen
 import com.wizeline.compose.academy.ui.extensions.getGrayColor
 import com.wizeline.compose.academy.ui.theme.ComposeAcademyTheme
-import com.wizeline.compose.academy.ui.theme.PrimaryGray
 import com.wizeline.compose.academy.ui.theme.dimen_10dp
 
 @Composable
