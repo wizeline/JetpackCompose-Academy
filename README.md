@@ -17,6 +17,7 @@
 - Create a gallery screen for the images
 - Upload your changes
 - All your screens and components should have the  ``` @Preview method ```
+- The Navigation between the screens IS NOT necessary 
 
 #Instructions
 - Clone the project and build
