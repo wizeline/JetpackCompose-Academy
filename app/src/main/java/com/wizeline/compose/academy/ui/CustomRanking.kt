@@ -13,7 +13,7 @@ import com.wizeline.compose.academy.ui.theme.PrimaryGray
 import com.wizeline.compose.academy.ui.theme.PrimaryOrange
 
 @Composable
-fun CustomRanking(ranking: Int, reviews: Int) {
+fun CustomRanking(ranking: Int, reviews: Int, showText: Boolean) {
     Row(verticalAlignment = Alignment.CenterVertically) {
         for (i in 1..5) {
             val starOn = (i <= ranking)
@@ -24,7 +24,7 @@ fun CustomRanking(ranking: Int, reviews: Int) {
             )
         }
         Text(
-            text = "(${reviews})",
+            text = "(${reviews}${if (showText) " reviews)" else ")"}",
             style = MaterialTheme.typography.body2.copy(color = PrimaryGravyVariant)
         )
     }

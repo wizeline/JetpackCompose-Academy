@@ -2,17 +2,17 @@ package com.wizeline.compose.academy.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Card
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.focusModifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.wizeline.compose.academy.R
@@ -44,7 +44,7 @@ fun PlaceItemCard(place: Place) {
             }
 
             Column(modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp)) {
-                CustomRanking(place.ranking, place.review)
+                CustomRanking(place.ranking, place.review, false)
 
                 CustomHeightSpacer(SpacerHeight.EXTRA_SMALL)
 

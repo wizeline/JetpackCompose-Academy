@@ -56,7 +56,10 @@ fun LandingScreen() {
 
             CustomHeightSpacer()
 
-            CustomButton(modifier = Modifier.fillMaxWidth())
+            CustomButton(
+                modifier = Modifier.fillMaxWidth(),
+                stringResource(id = R.string.label_sign_in)
+            )
 
             CustomHeightSpacer(SpacerHeight.SMALL)
 
