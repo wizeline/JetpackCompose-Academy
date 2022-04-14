@@ -8,35 +8,31 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import com.wizeline.compose.academy.R
-import com.wizeline.compose.academy.ui.components.CustomButton
-import com.wizeline.compose.academy.ui.components.CustomHeightSpacer
-import com.wizeline.compose.academy.ui.components.CustomImage
-import com.wizeline.compose.academy.ui.components.SpacerSize
+import com.wizeline.compose.academy.ui.components.*
 import com.wizeline.compose.academy.ui.theme.ComposeAcademyTheme
 
 @Composable
 fun LandingScreen() {
-    //Use Box
     Box(
         modifier = Modifier
             .fillMaxSize()
-    ){
-        CustomImage(imageId = R.drawable.landing,
+    ) {
+        FullSizeImage(
+            imageId = R.drawable.landing,
             description =
-            stringResource(id = R.string.landing_description),
-            modifier = Modifier.fillMaxSize()
+            stringResource(id = R.string.landing_description)
         )
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(20.dp),
+                .padding(dimensionResource(id = R.dimen.padding_xlarge)),
             verticalArrangement = Arrangement.Bottom
         ) {
             Text(
