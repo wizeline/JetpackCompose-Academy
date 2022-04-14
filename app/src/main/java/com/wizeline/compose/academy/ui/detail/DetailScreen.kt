@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -30,7 +31,8 @@ fun DetailScreen(hotel: Hotel) {
         contentAlignment = Alignment.BottomCenter
     ) {
 
-        Box(modifier = Modifier.fillMaxSize()
+        Box(modifier = Modifier
+            .fillMaxSize()
             .height(height = height.dp),
             contentAlignment = Alignment.TopCenter
         ) {
@@ -41,7 +43,7 @@ fun DetailScreen(hotel: Hotel) {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(15.dp),
+                    .padding(dimensionResource(id = R.dimen.padding_large)),
                 horizontalArrangement = Arrangement.SpaceBetween
 
             ) {
