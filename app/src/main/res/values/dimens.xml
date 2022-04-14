@@ -4,4 +4,10 @@
     <dimen name="padding_medium">10dp</dimen>
     <dimen name="padding_large">15dp</dimen>
     <dimen name="padding_xlarge">20dp</dimen>
+    <dimen name="rounded_small">5dp</dimen>
+    <dimen name="rounded_medium">10dp</dimen>
+    <dimen name="rounded_large">15dp</dimen>
+    <dimen name="rounded_xlarge">20dp</dimen>
+    <dimen name="detail_hotel_image_size">200dp</dimen>
+    <dimen name="zero_elevation">0dp</dimen>
 </resources>

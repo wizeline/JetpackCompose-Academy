@@ -21,4 +21,11 @@
     <string name="label_costs">Costs</string>
     <string name="label_place_description">Beachfront boutique hotel with 24 charming rooms, spa, yoga center, beach club, kiteboard school and three delicious restaurants, Mandarina Seaside Restaurant ...</string>
     <string name="landing_description">This is the landing image</string>
+    <string name="hotel_name_sample">Casa las tortugas</string>
+    <string name="hotel_name_sample_2">Aonang Villa Resort</string>
+    <string name="addres_sample">Av Damero, 77310, Isla HolBox, Q.R, Mexico</string>
+    <string name="addres_sample_2">Av Damero, Mexico</string>
+    <string name="check_availability">Check Availability</string>
+    <string name="label_icon">icon</string>
+    <string name="review_format">%s reviews</string>
 </resources>
