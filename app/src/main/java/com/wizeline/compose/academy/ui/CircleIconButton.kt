@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
+import com.wizeline.compose.academy.ui.theme.PrimaryGravyVariant
 
 @Composable
 fun CircleIconButton(
@@ -23,7 +24,8 @@ fun CircleIconButton(
         Icon(
             icon,
             contentDescription = "icon",
-            modifier = Modifier.padding(5.dp)
+            modifier = Modifier.padding(5.dp),
+            tint = PrimaryGravyVariant
         )
     }
 }
