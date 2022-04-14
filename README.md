@@ -23,6 +23,7 @@
 - Clone the project and build
 - Create a branch following this structure: ``` challenge/design/[FullName] ``` example ``` challenge/design/ImmanuelSalazarDiaz``` 
 - Push all your changes in your own branch
+- Create a PR
 
 
 
