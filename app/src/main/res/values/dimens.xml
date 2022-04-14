@@ -10,4 +10,10 @@
     <dimen name="rounded_xlarge">20dp</dimen>
     <dimen name="detail_hotel_image_size">200dp</dimen>
     <dimen name="zero_elevation">0dp</dimen>
+    <dimen name="category_image_size">75dp</dimen>
+    <dimen name="elevation_default">10dp</dimen>
+    <dimen name="image_gallery_size">100dp</dimen>
+    <dimen name="place_item_image_size">200dp</dimen>
+    <dimen name="place_item_image_width">250dp</dimen>
+    <dimen name="place_item_image_height">200dp</dimen>
 </resources>
