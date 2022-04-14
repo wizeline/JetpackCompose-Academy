@@ -1,5 +1,6 @@
 package com.wizeline.compose.academy.ui.gallery
 
+import android.content.res.Configuration
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -55,7 +56,8 @@ fun ImageGalleryScreen() {
 }
 
 @Composable
-@Preview
+@Preview(uiMode = Configuration.UI_MODE_NIGHT_NO, showBackground = true)
+@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
 fun PreviewImageGallery() {
     ComposeAcademyTheme {
         Surface {

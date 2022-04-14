@@ -1,5 +1,6 @@
 package com.wizeline.compose.academy.ui.detail
 
+import android.content.res.Configuration
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Surface
 import androidx.compose.material.icons.Icons
@@ -61,7 +62,8 @@ fun DetailScreen(hotel: Hotel) {
 }
 
 @Composable
-@Preview
+@Preview(uiMode = Configuration.UI_MODE_NIGHT_NO, showBackground = true)
+@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
 fun PreviewDetailScreen() {
     val hotel = Hotel(
         name = stringResource(id = R.string.hotel_name_sample_2),

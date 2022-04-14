@@ -1,5 +1,6 @@
 package com.wizeline.compose.academy.ui.landing
 
+import android.content.res.Configuration
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -67,7 +68,8 @@ fun LandingScreen() {
 }
 
 @Composable
-@Preview
+@Preview(uiMode = Configuration.UI_MODE_NIGHT_NO, showBackground = true)
+@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
 fun PreviewLandingScreen() {
     ComposeAcademyTheme {
         Surface {

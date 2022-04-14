@@ -1,5 +1,6 @@
 package com.wizeline.compose.academy.ui.home
 
+import android.content.res.Configuration
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -29,7 +30,6 @@ fun HomeScreen() {
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.White)
             .padding(dimensionResource(id = R.dimen.padding_medium)),
 
         ) {
@@ -119,7 +119,8 @@ fun HomeScreen() {
 }
 
 @Composable
-@Preview
+@Preview(uiMode = Configuration.UI_MODE_NIGHT_NO, showBackground = true)
+@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
 fun PreviewHomeScreen() {
     ComposeAcademyTheme {
         Surface {
