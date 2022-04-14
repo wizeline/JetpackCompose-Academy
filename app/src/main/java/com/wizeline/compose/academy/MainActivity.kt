@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    val screenToDisplay: Int = Random.nextInt(1, 5)
+                    val screenToDisplay: Int = Random.nextInt(1, 6)
                     when (screenToDisplay) {
                         1 -> LandingScreen()
                         2 -> ExploreScreen()
