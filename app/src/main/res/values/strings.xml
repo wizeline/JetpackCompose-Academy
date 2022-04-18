@@ -20,4 +20,10 @@
     <string name="label_details">Details</string>
     <string name="label_costs">Costs</string>
     <string name="label_place_description">Beachfront boutique hotel with 24 charming rooms, spa, yoga center, beach club, kiteboard school and three delicious restaurants, Mandarina Seaside Restaurant ...</string>
+    <string name="label_places_card_one">Casa Las Tortugas</string>
+    <string name="label_places_address_card_one">Av. Madereitas de las Rosas, México</string>
+    <string name="label_places_card_two">Aonang Villa Resort</string>
+    <string name="label_places_address_card_two">Av. Damero, México</string>
+    <string name="label_check_availability">Check availability</string>
+
 </resources>
