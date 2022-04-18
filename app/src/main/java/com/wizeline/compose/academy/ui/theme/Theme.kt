@@ -5,19 +5,31 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.ReadOnlyComposable
+import androidx.compose.runtime.staticCompositionLocalOf
 
-private val DarkColorPalette = darkColors(
-    primary = PrimaryBlue,
-    primaryVariant = PrimaryBlueVariant,
-    secondary = secondaryBlue
+private val DarkColorPalette = ExtendedColors(
+    material = darkColors(
+        primary = PrimaryBlue,
+        primaryVariant = PrimaryBlueVariant,
+        secondary = secondaryBlue
+    ),
+    PrimaryGravyVariant = PrimaryDarkGravyVariant,
+    PrimaryGray = PrimaryDarkGray
 )
 
-private val LightColorPalette = lightColors(
-    primary = PrimaryBlue,
-    primaryVariant = PrimaryBlueVariant,
-    secondary = secondaryBlue
+private val LightColorPalette = ExtendedColors(
+    material = lightColors(
+        primary = PrimaryBlue,
+        primaryVariant = PrimaryBlueVariant,
+        secondary = secondaryBlue
+    ),
+    PrimaryGravyVariant = PrimaryLightGravyVariant,
+    PrimaryGray = PrimaryLightGray
 )
+
+private val LocalColors = staticCompositionLocalOf { LightColorPalette }
 
 @Composable
 fun ComposeAcademyTheme(
@@ -30,10 +42,17 @@ fun ComposeAcademyTheme(
         LightColorPalette
     }
 
-    MaterialTheme(
-        colors = colors,
-        typography = Typography,
-        shapes = Shapes,
-        content = content
-    )
+    CompositionLocalProvider(LocalColors provides colors) {
+        MaterialTheme(
+            colors = colors.material,
+            typography = Typography,
+            shapes = Shapes,
+            content = content
+        )
+    }
 }
+
+val MaterialTheme.extendedColors: ExtendedColors
+    @Composable
+    @ReadOnlyComposable
+    get() = LocalColors.current

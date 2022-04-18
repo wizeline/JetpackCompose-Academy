@@ -20,4 +20,24 @@
     <string name="label_details">Details</string>
     <string name="label_costs">Costs</string>
     <string name="label_place_description">Beachfront boutique hotel with 24 charming rooms, spa, yoga center, beach club, kiteboard school and three delicious restaurants, Mandarina Seaside Restaurant ...</string>
+
+    <string name="placeImageDescription">place image</string>
+    <string name="placeDescription">place</string>
+    <string name="placeItemGalleryDescription">Place item gallery</string>
+
+    <string name="iconDescription">icon</string>
+    <string name="rankingDescription">ranking</string>
+    <string name="locationDescription">location On</string>
+    <string name="notificationsDescription">Notifications</string>
+    <string name="headerDescription">header image</string>
+    <string name="landingDescription">Landing Image</string>
+
+    <string name="emptyString" />
+    <string name="txtSearch">Search</string>
+    <string name="txtReviews">(%d) Reviews</string>
+    <string name="txtRanking">(%d)</string>
+    <string name="perNight">/night</string>
+    <string name="txtCategories">Categories</string>
+    <string name="txtSeeMore">See more</string>
+    <string name="txtAvailability">Check availability</string>
 </resources>
