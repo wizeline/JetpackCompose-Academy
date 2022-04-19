@@ -2,10 +2,12 @@ package com.wizeline.compose.academy.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes
-import androidx.compose.ui.unit.dp
+import com.wizeline.compose.academy.tools.dp_10
+import com.wizeline.compose.academy.tools.dp_15
+import com.wizeline.compose.academy.tools.dp_20
 
 val Shapes = Shapes(
-    small = RoundedCornerShape(10.dp),
-    medium = RoundedCornerShape(15.dp),
-    large = RoundedCornerShape(20.dp)
+    small = RoundedCornerShape(dp_10),
+    medium = RoundedCornerShape(dp_15),
+    large = RoundedCornerShape(dp_20)
 )
