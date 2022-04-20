@@ -1,8 +1,7 @@
-package com.wizeline.compose.academy.ui.views
+package com.wizeline.compose.academy.ui.landing
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -19,8 +18,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.wizeline.compose.academy.R
 import com.wizeline.compose.academy.ui.theme.ComposeAcademyTheme
-import com.wizeline.compose.academy.ui.utils.CustomButton
-import com.wizeline.compose.academy.ui.utils.CustomHeightSpacer
+import com.wizeline.compose.academy.ui.components.buttons.CustomButton
+import com.wizeline.compose.academy.ui.components.utils.CustomHeightSpacer
 
 @Composable
 fun LandingView() {
@@ -59,7 +58,10 @@ fun LandingView() {
 
             CustomHeightSpacer()
 
-            CustomButton( modifier = Modifier.fillMaxWidth())
+            CustomButton(
+                title = stringResource(id = R.string.label_sign_in),
+                modifier = Modifier.fillMaxWidth()
+            )
 
             CustomHeightSpacer()
 

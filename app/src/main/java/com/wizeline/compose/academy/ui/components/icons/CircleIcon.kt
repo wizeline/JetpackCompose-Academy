@@ -1,4 +1,4 @@
-package com.wizeline.compose.academy.ui.utils
+package com.wizeline.compose.academy.ui.components.icons
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -12,21 +12,26 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun CircleFavorite(
+fun CircleIcon(
     icon: ImageVector
 ) {
     Box(
-        modifier = Modifier
-            .padding(5.dp)
-            .background(
-                color = Color.White,
-                shape = CircleShape
-            )
+        modifier = Modifier.padding(10.dp)
     ) {
-        Icon(
-            icon,
-            contentDescription = "icon",
-            modifier = Modifier.padding(5.dp)
-        )
+        Box(
+            modifier = Modifier
+                .padding(5.dp)
+                .background(
+                    color = Color.White,
+                    shape = CircleShape
+                )
+        ) {
+            Icon(
+                icon,
+                contentDescription = "icon",
+                modifier = Modifier.padding(5.dp)
+            )
+        }
     }
+
 }

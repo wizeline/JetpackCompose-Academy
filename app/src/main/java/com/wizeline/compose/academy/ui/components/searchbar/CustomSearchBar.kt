@@ -1,4 +1,4 @@
-package com.wizeline.compose.academy.ui.utils
+package com.wizeline.compose.academy.ui.components.searchbar
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.*
@@ -12,7 +12,7 @@ import androidx.compose.ui.unit.dp
 import com.wizeline.compose.academy.R
 
 @Composable
-fun CustomSearchBar(){
+fun CustomSearchBar() {
     Card(
         elevation = 15.dp,
         shape = MaterialTheme.shapes.medium

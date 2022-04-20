@@ -1,4 +1,4 @@
-package com.wizeline.compose.academy.ui.views
+package com.wizeline.compose.academy.ui.home
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -10,6 +10,7 @@ import androidx.compose.material.icons.filled.Star
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -27,11 +28,17 @@ import com.wizeline.compose.academy.ui.theme.ComposeAcademyTheme
 import com.wizeline.compose.academy.ui.theme.PrimaryGravyVariant
 import com.wizeline.compose.academy.ui.theme.PrimaryGray
 import com.wizeline.compose.academy.ui.theme.PrimaryOrange
-import com.wizeline.compose.academy.ui.utils.CircleFavorite
+import com.wizeline.compose.academy.ui.components.icons.CircleIcon
+import com.wizeline.compose.academy.ui.components.utils.CustomHeightSpacer
+import com.wizeline.compose.academy.ui.components.utils.SpacerSize
 
 @Composable
 fun PlacementItemView() {
-    Card {
+    Card(
+        modifier = Modifier.padding(5.dp),
+        shape = MaterialTheme.shapes.medium,
+        elevation = 5.dp
+    ) {
         Column(
             modifier = Modifier.padding(horizontal = 15.dp, vertical = 8.dp)
         ) {
@@ -42,19 +49,39 @@ fun PlacementItemView() {
                     painter = painterResource(id = R.drawable.hotel_image),
                     contentDescription = "place",
                     contentScale = ContentScale.Crop,
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier
+                        .height(200.dp)
+                        .width(250.dp)
+                        .padding(5.dp)
+                        .clip(MaterialTheme.shapes.medium)
                 )
 
-                CircleFavorite(icon = Icons.Default.FavoriteBorder)
+                CircleIcon(icon = Icons.Default.FavoriteBorder)
             }
 
 
             Column {
+                CustomHeightSpacer(
+                    spacerSize = SpacerSize.EXTRA_SMALL
+                )
+
                 Ranking()
+
+                CustomHeightSpacer(
+                    spacerSize = SpacerSize.EXTRA_SMALL
+                )
 
                 HotelName(hotelName = "Casa de las tortugas")
 
+                CustomHeightSpacer(
+                    spacerSize = SpacerSize.EXTRA_SMALL
+                )
+
                 HotelAddress(address = "Av. Romero, México")
+
+                CustomHeightSpacer(
+                    spacerSize = SpacerSize.EXTRA_SMALL
+                )
 
                 TextPriceByNight()
             }

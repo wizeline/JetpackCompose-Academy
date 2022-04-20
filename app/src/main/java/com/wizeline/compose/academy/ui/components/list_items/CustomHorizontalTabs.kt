@@ -1,4 +1,4 @@
-package com.wizeline.compose.academy.ui.utils
+package com.wizeline.compose.academy.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -23,14 +23,14 @@ fun CustomHorizontalTabs(
     selectedIndex: Int = 0
 ) {
     LazyRow {
-        itemsIndexed(list) { index, item->
+        itemsIndexed(list) { index, item ->
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
                     text = item,
                     style = MaterialTheme.typography.body1.copy(
-                        color = if(selectedIndex == index) MaterialTheme.colors.primary else PrimaryGravyVariant,
+                        color = if (selectedIndex == index) MaterialTheme.colors.primary else PrimaryGravyVariant,
                         fontWeight = FontWeight.Bold
                     ),
                     modifier = Modifier.padding(
@@ -39,9 +39,10 @@ fun CustomHorizontalTabs(
                     )
                 )
 
-                if(selectedIndex == index){
+                if (selectedIndex == index) {
                     Box(
-                        modifier = Modifier.size(5.dp)
+                        modifier = Modifier
+                            .size(5.dp)
                             .background(
                                 color = MaterialTheme.colors.primary,
                                 shape = CircleShape
