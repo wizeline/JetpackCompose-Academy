@@ -20,4 +20,7 @@
     <string name="label_details">Details</string>
     <string name="label_costs">Costs</string>
     <string name="label_place_description">Beachfront boutique hotel with 24 charming rooms, spa, yoga center, beach club, kiteboard school and three delicious restaurants, Mandarina Seaside Restaurant ...</string>
+    <string name="label_ranking_quantity">(%1$s)</string>
+    <string name="label_ranking_quantity_review">(%1$s) review</string>
+    <string name="label_check_availability">Check Availability</string>
 </resources>
