@@ -1,6 +1,7 @@
 package com.wizeline.compose.academy.ui.home
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
@@ -29,11 +30,14 @@ import com.wizeline.compose.academy.ui.theme.ComposeAcademyTheme
 import com.wizeline.compose.academy.ui.theme.Dimens
 
 @Composable
-fun DestinyItem(place: PlaceModel) {
+fun DestinyItem(place: PlaceModel, onClick: (String) -> Unit) {
     Card(
         elevation = 10.dp,
         modifier = Modifier
-            .padding(Dimens.ITEM_SEPARATION_NORMAL.size),
+            .padding(Dimens.ITEM_SEPARATION_NORMAL.size)
+            .clickable {
+               onClick(place.title)
+            }
     ) {
         Column(
             modifier = Modifier.padding(Dimens.ITEM_SEPARATION_NORMAL.size)
@@ -65,12 +69,12 @@ fun DestinyItem(place: PlaceModel) {
                 Icon(
                     Icons.Default.LocationOn,
                     contentDescription = "location icon",
-                    tint = Color.LightGray
+                    tint = Color.Gray
                 )
                 Text(
                     text =  place.address,
                     style = MaterialTheme.typography.body1.copy(
-                        color = Color.LightGray
+                        color = Color.Gray
                     )
                 )
             }
@@ -87,7 +91,7 @@ fun DestinyItem(place: PlaceModel) {
                     }
                     withStyle(
                         style = SpanStyle(
-                            color = Color.LightGray,
+                            color = Color.Gray,
                             fontWeight = FontWeight.Normal,
                             fontSize = MaterialTheme.typography.h6.fontSize
                         )
@@ -108,7 +112,7 @@ fun DestinyItemPreview() {
         Surface {
             DestinyItem(
                 PlaceModel("Test","address",100.00.getFormatMoney(),"night",234,4.3)
-            )
+            ){}
         }
     }
 }

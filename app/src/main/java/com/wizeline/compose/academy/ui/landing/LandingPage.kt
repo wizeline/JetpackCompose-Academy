@@ -23,13 +23,13 @@ import com.wizeline.compose.academy.ui.theme.ComposeAcademyTheme
 import com.wizeline.compose.academy.ui.theme.Dimens
 
 @Composable
-fun LandingPage() {
+fun LandingPage(onClick: () -> Unit) {
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.BottomStart
     ) {
         LandingImage()
-        PageBody()
+        PageBody(onClick)
     }
 }
 
@@ -44,7 +44,7 @@ private fun LandingImage() {
 }
 
 @Composable
-private fun PageBody() {
+private fun PageBody(onClick: () -> Unit) {
     Column(
         verticalArrangement = Arrangement.Bottom,
         modifier = Modifier.padding(horizontal = 32.dp, vertical = Dimens.ITEM_SEPARATION_NORMAL.size)
@@ -65,7 +65,9 @@ private fun PageBody() {
             modifier = Modifier.padding(top = Dimens.ITEM_SEPARATION_NORMAL.size)
         )
         Button(
-            onClick = { /*TODO*/ },
+            onClick = {
+                onClick()
+            },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(top = Dimens.ITEM_SEPARATION_NORMAL.size)
@@ -95,7 +97,7 @@ private fun PageBody() {
 fun PreviewLandingPage() {
     ComposeAcademyTheme {
         Surface {
-            LandingPage()
+            LandingPage(){}
         }
     }
 }

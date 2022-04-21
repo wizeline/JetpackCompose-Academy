@@ -4,8 +4,8 @@ import com.wizeline.compose.academy.data.models.Place
 import com.wizeline.compose.academy.domain.getFormatMoney
 import com.wizeline.compose.academy.domain.models.PlaceModel
 
-fun Place.toPLaceModel(): PlaceModel =
+fun Place.toPlaceModel(): PlaceModel =
     PlaceModel(title, address, "\$${price.getFormatMoney()}",priceRate, rates, rateAverage)
 
 fun List<Place>.toPlaceModelList(): List<PlaceModel> =
-    this.map { place -> place.toPLaceModel() }
+    this.map { place -> place.toPlaceModel() }

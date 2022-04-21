@@ -7,4 +7,7 @@ class PlacesRepository {
     fun fetchPLaces(): List<Place> {
         return LocalPlacesDatasource().fetchPlaces()
     }
+    fun fetchPLace(name: String): Place? {
+        return LocalPlacesDatasource().fetchPlace(name)
+    }
 }

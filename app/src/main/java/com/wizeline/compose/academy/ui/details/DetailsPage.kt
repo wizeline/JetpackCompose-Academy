@@ -26,6 +26,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.wizeline.compose.academy.R
+import com.wizeline.compose.academy.domain.GetPLacesUsecase
 import com.wizeline.compose.academy.domain.getFormatMoney
 import com.wizeline.compose.academy.domain.models.PlaceModel
 import com.wizeline.compose.academy.ui.common.CircularButton
@@ -41,7 +42,8 @@ val demo_images = arrayOf(
 )
 
 @Composable
-fun DetailsPage(place: PlaceModel) {
+fun DetailsPage(placeName: String) {
+    val place = GetPLacesUsecase().fetchPlace(placeName)
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.BottomStart
@@ -51,10 +53,12 @@ fun DetailsPage(place: PlaceModel) {
                 .align(Alignment.TopStart)
                 .fillMaxHeight(0.5f)
         )
-        DetailsCard(
-            Modifier
-                .align(Alignment.BottomStart)
-                .fillMaxHeight(0.55f),place)
+        place?.let {
+            DetailsCard(
+                Modifier
+                    .align(Alignment.BottomStart)
+                    .fillMaxHeight(0.55f),it)
+        }
     }
 }
 
@@ -171,7 +175,7 @@ fun DetailsCard(modifier: Modifier, place: PlaceModel) {
                                 }
                                 withStyle(
                                     style = SpanStyle(
-                                        color = Color.LightGray,
+                                        color = Color.Gray,
                                         fontWeight = FontWeight.Normal,
                                         fontSize = MaterialTheme.typography.h6.fontSize
                                     )
@@ -183,7 +187,8 @@ fun DetailsCard(modifier: Modifier, place: PlaceModel) {
                         )
                         Button(
                             onClick = { /*TODO*/ },
-                            modifier = Modifier.padding(top = Dimens.ITEM_SEPARATION_NORMAL.size)
+                            modifier = Modifier.padding(top = Dimens.ITEM_SEPARATION_NORMAL.size),
+                            shape = RoundedCornerShape(15.dp)
                         ){
                             Text(
                                 text = stringResource(id = R.string.label_check_availability),
@@ -204,7 +209,7 @@ fun DetailsCard(modifier: Modifier, place: PlaceModel) {
 fun previewDetailsPage() {
     MaterialTheme {
         Surface {
-            DetailsPage(PlaceModel("Test","address",100.00.getFormatMoney(),"night",234,4.3))
+            DetailsPage("Casa Las Tortugas")
         }
     }
 }
