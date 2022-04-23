@@ -1,4 +1,4 @@
-package com.wizeline.compose.academy.ui.theme
+package com.wizeline.compose.academy.presentation.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
