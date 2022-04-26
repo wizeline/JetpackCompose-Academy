@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.wizeline.compose.academy.ui.gallery.ImageGalleryScreen
 import com.wizeline.compose.academy.ui.theme.ComposeAcademyTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,7 +23,11 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    //Greeting("Cecilia")
+                    //LandingScreen()
+                    //HomeScreen()
+                    //DetailScreen()
+                    ImageGalleryScreen()
                 }
             }
         }
